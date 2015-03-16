@@ -1,0 +1,32 @@
+General: 
+- One template file, instead of for each city one
+	- If you really want them to differ, you could extract that to some xml-file (or json or DB) elsewhere instead of making a different php file for each one seperately
+- Extracting strings (Eg. urls) to one file, it's like impossible 
+	to move the site at this time.
+- Creating a php-class for doing all the mongoDB requests and 
+	parsing them to JSON-arrays that can be used in de data, so if you´d want to switch DB you'd just have to change one file.
+- I'm not sure where the data/weather/weather.php and data/../air.
+	php etc get run? 
+- I believe the loadContent.js-file could be much shorter if 
+	written more dynamically, (there are also a few weird thingies in here, I don't believe the refresh functions all work, 2 of the file extensions they're supposed to load are wrong)
+- I think using PHP-Objects instead of JSON after downloading the 	
+	info would be more readable
+- I'm not sure all the data retrieving files still work, sites and 
+	api have changed
+
+
+
+
+
+
+
+
+
+
+
+
+
+/data/airquality/airquality.php
+	- reads a whole HTML file (website) to get data, definitely not working anymore, why not 
+
+/widget/instagram  not working because wrong url to php file

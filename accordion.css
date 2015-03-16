@@ -1,0 +1,19 @@
+body {
+	padding: 0px;
+	margin: 0px;
+}
+
+#container {
+}
+
+.row {
+	display: table-row;
+	height: 50px;
+}
+
+.cell {
+	display: table-cell;
+	border: solid black 1px;
+	width: 10px;
+	background: #333;
+}

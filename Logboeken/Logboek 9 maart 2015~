@@ -1,0 +1,65 @@
+Logboek 9 maart 2015
+
+- Code (php, js, html, css) van vorig Dashboard bekeken (Database code nog niet beschikbaar)
+- Oude code op eigen server gedraaid (lottehofstede.nl/Stage/CityDashboard-master)
+- Ingelezen over d3.js
+- Besproken met Alvin hoe hij het ziet zitten: 
+	- Opdeling in tijd in plaats van plaats
+	- Iets met kleine uitklapbare kolommen
+		- Voorbeeld: 
+			- http://www.nytimes.com/newsgraphics/2013/09/13/fashion-week-editors-picks/
+			- http://www.on-broadway.nyc/
+	- Hij gaat zich bezig houden met de data scrapen en via MongoDB de data naar te JSON parsen 
+	- Ik ga me vooral bezighouden met frontend (visualisatie), en dus de JSON van de server ophalen en gebruiken
+	- We gebruiken voor de visualisatie d3.js, Alvin weet hier niet heel veel van dus dat moet ik zelf uitzoeken
+	- Visual design wordt later nog besproken
+	- Ik ga eerst de oude code proberen terug te doen werken en me in d3.js verdiepen
+
+- Eerste kennismaking met MongoDB, ik heb mongoDB geinstalleerd en rechten gekregen om 3 databases te kunnen lezen (twitter, locations en images), Alvin heeft me even moeten helpen om op gang te komen maar nu begrijp ik het wel
+
+
+Logboek 10 maart 2015
+
+- Ik had disk meegenomen met Ubuntu op om "nieuwe" machine de scripts te laten draaien
+	- Bootorder helaas niet veranderbaar omdat wachtwoord op bios
+	- Admin wachtwoord (dat Alvin vergeten was) in de root gereset zodat we oude install kunnen gebruiken
+	- Scripts daar op laten draaien om te zien of ze nog goed werken
+- Ik moet een diagramma maken van alles files die er nu zijn en bekijken hoe ik het anders wil
+- De query's worden op dit moment rechtstreeks in de URL gedaan, misschien moeten we dit extraheren voor reusability
+- Ik heb Alvin mijn nieuwe voorstellen gemaild hij gaat ze dan bekijken
+
+Logboek 11 maart 2015
+
+- Processing-Script proberen aan te passen aan onze lokale database, (script om instagram urls uit onze db uit te lezen en de foto's te downloaden)
+    wat problemen met deze in cronjob te gebruiken omdat ze een GUI nodig heeft om te draaien, 
+    Alvin heeft gezegd dat hij ook geen oplossing weet en dat we het maar even moeten laten.
+- Daarna heb ik nagedacht over hoe ik de veranderingen ga implementeren en wat uitgetekend
+- PHPStorm opgezet om de website te kunnen aanpassen
+- Problemen: logfile op mijn gedeelde server niet zichtbaar, schoolserver niet bereikbaar via PHPStorm(?), dus kon moeilijk mijn veranderingen testen/debuggen
+
+Logboek 12 maart 2015
+
+- Dan maar lokaal een apache server opgezet en ze proberen hier te draaien: werkt maar één probleem
+    - MongoDB gebruikt een SSL verbinding en dus heb ik verficatie nodig om dit te doen werken, ik ga dat niet lokaal installeren...
+    - Eerst dan maar mijn MongoDB requests verplaatsen naar één file (MongoDB class) en zorgen dat ik de verficatie daar gewoon uit kan zetten:
+
+        <?php
+$arrContextOptions=array(
+    "ssl"=>array(
+        "verify_peer"=>false,
+        "verify_peer_name"=>false,
+    ),
+);  
+
+    - Dit is niet zo veilig, maar hoeft toch enkel voor de lokale versie te worden gebruikt (op externe server is alles wel in orde)
+
+
+
+
+
+
+
+
+
+
+
