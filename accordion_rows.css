@@ -1,0 +1,21 @@
+body {
+	padding: 0px;
+	margin: 0px;
+	background: black;
+}
+
+#container {
+}
+
+.row {
+	display: table-row;
+	height: 30px;
+}
+
+.cell {
+	display: table-cell;
+	border-top: solid black 1px;
+	border-bottom: solid black 1px;
+	width: 40px;
+	background: #333;
+}
