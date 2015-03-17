@@ -69,6 +69,21 @@ Logboek 13 maart 2015
 - Iemand geholpen software te installeren die niet wilde werken op haar computer.
 
 
+Logboek 16 maart 2015
+
+- JS files geschreven om een accordion-effect te maken
+    - eerst in JQuery
+    - Daarna in d3.js
+        - d3.js is heel raar, maar de code is wel een stuk korter dan die van JQuery...
+- Tekeningen gemaakt over mogelijk design
+- Vergadering gehad met Alvin te bedenken hoe we het gaan doen.
+    - Uitkomst: 
+        - Horizontaal uitklappen 
+        - Steeds meer details
+        - Een aantal onderwerpen gaan eruit laten (wikipedia)
+        - Het gaat vooral zijn om data te kunnen vergelijken (zie on-broadway.nyc voor voorbeeld)
+
+
 
 
 
