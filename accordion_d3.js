@@ -17,12 +17,11 @@
             d3.selectAll(".row").
             transition().duration(500).style('height', function() {return (this === el.parentNode) ? newH : iniH});
            
-            d3.selectAll('.cell')
+            d3.selectAll('.cell').classed('current', function() {return (this === el) ? true : false})
             .transition().duration(500).style('width', function() {
             	return (this === el || (d3.select(this).style("width") == newW && d3.select(el).style("width") == newW)) ? newW : iniW;
-            }) 
-            //if it's already 200px, we don't want to resize the other ones in the same column
-        	.classed('current', function() {return (this === el) ? true : false});
+            });
+        	//if it's already 200px, we don't want to resize the other ones in the same column
         }
         
     });
