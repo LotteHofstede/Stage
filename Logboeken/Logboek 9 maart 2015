@@ -74,7 +74,7 @@ Logboek 16 maart 2015
 - JS files geschreven om een accordion-effect te maken
     - eerst in JQuery
     - Daarna in d3.js
-        - d3.js is heel raar, maar de code is wel een stuk korter dan die van JQuery...
+        - d3.js is heel raar, maar de code is wel een stuk korter dan die van JQuery... en heeft nog een bug
 - Tekeningen gemaakt over mogelijk design
 - Vergadering gehad met Alvin te bedenken hoe we het gaan doen.
     - Uitkomst: 
@@ -84,8 +84,16 @@ Logboek 16 maart 2015
         - Het gaat vooral zijn om data te kunnen vergelijken (zie on-broadway.nyc voor voorbeeld)
 
 
+Logboek 17 maart 2015
 
-
+- Heleboel dingen uitgeprobeerd in d3.js om er een beetje mee overweg te leren gaan.
+    - Bug van gisteren eindelijk weten te fixen
+    - Resultaten staan op github/LotteHofstede
+        - Gradient
+        - Op meerdere manieren laten getekend worden
+        - Verschillende vormen uitgeprobeerd
+        - y-as omgedraaid
+        - Proberen resizable te maken
 
 
 

@@ -5,17 +5,19 @@ body {
 }
 
 #container {
+	display: inline-block;
+	border-top: solid white 1px;
+	border-bottom: solid white 1px;
 }
 
 .row {
-	display: table-row;
+	width: 600px;
 	height: 30px;
+	border-top: solid white 1px;
+	border-bottom: solid white 1px;
 }
 
-.cell {
-	display: table-cell;
-	border-top: solid black 1px;
-	border-bottom: solid black 1px;
-	width: 40px;
-	background: #333;
+svg {
+	height: inherit;
+	width: inherit;
 }

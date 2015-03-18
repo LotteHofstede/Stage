@@ -1,7 +1,4 @@
-function drawGraph() {
-
-
-
+function drawGraph(data) {
     var width = 400;
     var height = 100;
 //Create scale functions
@@ -67,3 +64,5 @@ var lineData = [ { "x": 0,   "y": 5},  { "x": 10,  "y": 20},
                  { "x": 150,  "y": 5},  { "x": 160, "y": 60},
                  { "x": 170,  "y": 5},  { "x": 180,  "y": 20},
                  { "x": 190,  "y": 10}, { "x": 200,  "y": 40}];
+
+drawGraph(lineData);
