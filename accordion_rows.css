@@ -1,7 +1,7 @@
 body {
 	padding: 0px;
 	margin: 0px;
-	background: black;
+	background: white;
 }
 
 #container {
@@ -21,3 +21,19 @@ svg {
 	height: inherit;
 	width: inherit;
 }
+
+
+.background {
+    fill: none;
+    pointer-events: all;
+}
+
+#cont line {
+    shape-rendering: crispEdges;
+}
+
+#cont line {
+    fill: none;
+    stroke: #333;
+}
+

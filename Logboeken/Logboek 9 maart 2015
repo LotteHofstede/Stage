@@ -95,6 +95,15 @@ Logboek 17 maart 2015
         - y-as omgedraaid
         - Proberen resizable te maken
 
+Logboek 18 maart 2015
+
+- Verder gegaan met d3.js, moeizaam
+    - Resizable accordion werkt
+    - Maar moet nu ook met een soort "fish-eye"-distortion werken van Alvin
+        - Hier veel tijd ingestoken omdat er nog niet zoiets bestond voor line graphs, enkel voor andere soorten grafieken.
+        - Wel ongeveer gelukt, maar de grafiek blijft niet breed genoeg en ik geraak er niet aan uit hoe dat komt.
+    - Veel research gedaan naar d3.js en veel bijgeleerd
+
 
 
 
