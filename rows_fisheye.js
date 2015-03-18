@@ -83,7 +83,7 @@ var lineData4 = [ { "x": 0,   "y": 67},  { "x": 10,  "y": 34},
 
 
 
-  var xFisheye = d3.fisheye.scale(d3.scale.identity).domain([0, d3.max(lineData, function(d) { return d.x; })]).range([0,600]).focus(300);
+  var xFisheye = d3.fisheye.scale(d3.scale.identity).domain([0, d3.max(lineData, function(d) { return d.x; })]).focus(300);
 
 
 
@@ -268,7 +268,6 @@ drawGraph("#test3", lineData4);
  // console.clear()
   
   var svg = d3.select("#cont").select("svg");
-  svg.selectAll(".line").data(lineData);
   svg.on("mousemove", function() {
     var mouse = d3.mouse(this);
     xFisheye.focus(mouse[0]);       
