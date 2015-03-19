@@ -1,6 +1,7 @@
 import gridfs
 import DB
-
+import mimetypes
+import requests
 
 limit = 1000
 ipAddress = "127.0.0.1"
