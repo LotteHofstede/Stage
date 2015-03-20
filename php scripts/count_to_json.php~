@@ -1,0 +1,7 @@
+<?php
+	$m = new MongoClient();
+	$db = $m->twitter;
+	$collection = $db->count;
+	$obj = $collection->findOne();
+	echovar_dump($obj);
+?>
