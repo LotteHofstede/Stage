@@ -106,4 +106,13 @@ Logboek 18 maart 2015
 
 
 
+Logboek 19 maart 2015
+
+- Verder gegaan met de fish-eye, die werkt nu helemaal!
+- Opnieuw het Processing script proberen te draaien, maar dat ging niet
+    - Dan heb ik perongeluk de hele ubuntu installatie kapot gemaakt toen ik iets probeerde te laten draaien
+    - Maar niet zo erg, want de computer moest toch een andere installatie krijgen
+    - Nieuwe ubuntu geinstalleerd en de hele schijf geformateerd, 
+- Processing script herschreven naar python zodat er geen grafische interface meer voor nodig is en dus als cronjob kan worden gedraaid
+- Cronjob opgezet 
 
