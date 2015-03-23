@@ -1,0 +1,4 @@
+ms=$(date --date=$(date +"%D") +%s%N | cut -b1-13)
+path=/home/asro/Documents/$(date +%y-%m-%d)
+mongodump -h 134.58.106.9 --authenticationDatabase admin --username reader --password mAyReAd0 -d rate -c flow -q '{created_at: {$gte: new Date('"$ms"')}}' --out "$path"
+bsondump "$path"/twitter/count.bson > /var/www/html/"$(date +%Y-%m-%d)".json
