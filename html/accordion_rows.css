@@ -1,0 +1,39 @@
+body {
+	padding: 0px;
+	margin: 0px;
+	background: black;
+}
+
+#container {
+	display: inline-block;
+	border-top: solid white 1px;
+	border-bottom: solid white 1px;
+}
+
+.row {
+	width: 600px;
+	height: 30px;
+	border-top: solid white 1px;
+	border-bottom: solid white 1px;
+}
+
+svg {
+	height: inherit;
+	width: inherit;
+}
+
+
+.background {
+    fill: none;
+    pointer-events: all;
+}
+
+#cont line {
+    shape-rendering: crispEdges;
+}
+
+#cont line {
+    fill: none;
+    stroke: #333;
+}
+
