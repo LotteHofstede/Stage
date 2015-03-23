@@ -125,4 +125,8 @@ Logboek 20 maart 2015
 Logboek 23 maart 2015
 
 - Mongodump-API problemen opgelost door shellscript te gebruiken om variabelen bij te houden
-- 
+    - Mongodump genereerde toch geen valide JSON, dus dan maar mijn oude PHP script gebruikt om naar JSON dump te schrijven
+- MongoDB wil niet meer goed werken op machine, dus nu trek ik alles uit Alvins database ipv de lokale, dit is toch beter :)
+- php-script geschreven dat de data uit de dump naar een array parsed, zodat ik ze kan gebruiken voor mijn webpagina's.
+- JSON-dump files in mijn grafiek "geplugd"
+- Wat bewerkingen en testjes op grafieken gedaan

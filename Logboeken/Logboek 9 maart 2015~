@@ -1,5 +1,5 @@
 Logboek 9 maart 2015
-
+8:30 - 17:30
 - Code (php, js, html, css) van vorig Dashboard bekeken (Database code nog niet beschikbaar)
 - Oude code op eigen server gedraaid (lottehofstede.nl/Stage/CityDashboard-master)
 - Ingelezen over d3.js
@@ -19,7 +19,7 @@ Logboek 9 maart 2015
 
 
 Logboek 10 maart 2015
-
+8:45 - 18
 - Ik had disk meegenomen met Ubuntu op om "nieuwe" machine de scripts te laten draaien
 	- Bootorder helaas niet veranderbaar omdat wachtwoord op bios
 	- Admin wachtwoord (dat Alvin vergeten was) in de root gereset zodat we oude install kunnen gebruiken
@@ -29,7 +29,7 @@ Logboek 10 maart 2015
 - Ik heb Alvin mijn nieuwe voorstellen gemaild hij gaat ze dan bekijken
 
 Logboek 11 maart 2015
-
+8:45 - 18
 - Processing-Script proberen aan te passen aan onze lokale database, (script om instagram urls uit onze db uit te lezen en de foto's te downloaden)
     wat problemen met deze in cronjob te gebruiken omdat ze een GUI nodig heeft om te draaien, 
     Alvin heeft gezegd dat hij ook geen oplossing weet en dat we het maar even moeten laten.
@@ -38,28 +38,91 @@ Logboek 11 maart 2015
 - Problemen: logfile op mijn gedeelde server niet zichtbaar, schoolserver niet bereikbaar via PHPStorm(?), dus kon moeilijk mijn veranderingen testen/debuggen
 
 Logboek 12 maart 2015
-
+8:45 - 18
 - Dan maar lokaal een apache server opgezet en ze proberen hier te draaien: werkt maar één probleem
     - MongoDB gebruikt een SSL verbinding en dus heb ik verficatie nodig om dit te doen werken, ik ga dat niet lokaal installeren...
-    - Eerst dan maar mijn MongoDB requests verplaatsen naar één file (MongoDB class) en zorgen dat ik de verficatie daar gewoon uit kan zetten:
+    - Eerst dan maar mijn MongoDB requests verplaatsen naar één file (MongoDB class), testen lokaal, runnen op mijn server...
 
-        <?php
-$arrContextOptions=array(
-    "ssl"=>array(
-        "verify_peer"=>false,
-        "verify_peer_name"=>false,
-    ),
-);  
+- veranderingen:
+    - MongoDB wordt op één plek aangesproken (php/MongoDBHandler.php)
+    - loadWidgets.php laadt de specifieke widgets in voor een stad, geen verschillende template-files meer dus
+    - de website is nu volledig migreerbaar naar een andere locatie, door maar één variabele aan te passen (in php/config.php), 
+        alle URL's worden vandaar ingeladen dmv php/urlHelper.php
+    - contentLoader.js zo aangepast dat er niet zo veel dubbele code in staat, alleen de specifieke dingen moet ik nog wel aanpassen.
 
-    - Dit is niet zo veilig, maar hoeft toch enkel voor de lokale versie te worden gebruikt (op externe server is alles wel in orde)
-
-
-
-
-
-
-
-
-
+- De Lijn api is veranderd: (Besproken met Alvin, we gaan dit later bekijken)
+    - Vroeger: XML file met aankomsturen, Nu: HTML met minuten voor bus arriveert
+    - Wat willen we: 
+        - Data van wanneer een bus langs een halte (in jouw buurt) is gepasseert
+        - Een mooie grafiek met hoogtepunten van wanneer meerdere bussen ergens tegelijk waren
+    - Probleem: 
+        - We moeten hiervoor elke x minuten alle bushaltes van de lijn scrapen, om na te gaan welke bus is aangekomen en hoelaat...
+        - De lijn zal ons hopelijk niet blokkeren!
+        - Alvin gaat hiervoor een Processingscript schrijven
 
 
+
+Logboek 13 maart 2015
+8:45 - 16:45
+- Vandaag contentLoader.js helemaal afgemaakt zodat ze super veel korter is en countdown.js niet meer nodig is.
+- Veel bijgeleerd over JQuery, super veel moeten debuggen, best wel moeilijk!
+- Iemand geholpen software te installeren die niet wilde werken op haar computer.
+
+
+Logboek 16 maart 2015
+
+- JS files geschreven om een accordion-effect te maken
+    - eerst in JQuery
+    - Daarna in d3.js
+        - d3.js is heel raar, maar de code is wel een stuk korter dan die van JQuery... en heeft nog een bug
+- Tekeningen gemaakt over mogelijk design
+- Vergadering gehad met Alvin te bedenken hoe we het gaan doen.
+    - Uitkomst: 
+        - Horizontaal uitklappen 
+        - Steeds meer details
+        - Een aantal onderwerpen gaan eruit laten (wikipedia)
+        - Het gaat vooral zijn om data te kunnen vergelijken (zie on-broadway.nyc voor voorbeeld)
+
+
+Logboek 17 maart 2015
+
+- Heleboel dingen uitgeprobeerd in d3.js om er een beetje mee overweg te leren gaan.
+    - Bug van gisteren eindelijk weten te fixen
+    - Resultaten staan op github/LotteHofstede
+        - Gradient
+        - Op meerdere manieren laten getekend worden
+        - Verschillende vormen uitgeprobeerd
+        - y-as omgedraaid
+        - Proberen resizable te maken
+
+Logboek 18 maart 2015
+
+- Verder gegaan met d3.js, moeizaam
+    - Resizable accordion werkt
+    - Maar moet nu ook met een soort "fish-eye"-distortion werken van Alvin
+        - Hier veel tijd ingestoken omdat er nog niet zoiets bestond voor line graphs, enkel voor andere soorten grafieken.
+        - Wel ongeveer gelukt, maar de grafiek blijft niet breed genoeg en ik geraak er niet aan uit hoe dat komt.
+    - Veel research gedaan naar d3.js en veel bijgeleerd
+
+Logboek 19 maart 2015
+
+- Verder gegaan met de fish-eye, die werkt nu helemaal!
+- Opnieuw het Processing script proberen te draaien, maar dat ging niet
+    - Dan heb ik perongeluk de hele ubuntu installatie kapot gemaakt toen ik iets probeerde te laten draaien
+    - Maar niet zo erg, want de computer moest toch een andere installatie krijgen
+    - Nieuwe ubuntu geinstalleerd en de hele schijf geformateerd, 
+- Processing script herschreven naar python zodat er geen grafische interface meer voor nodig is en dus als cronjob kan worden gedraaid
+- Cronjob opgezet 
+
+Logboek 20 maart 2015
+
+- Naar de resultaten gekeken van de cronjob
+- Een mongo "count-script"-cronjob opgezet, dat elke minuut de de resultaten controleert van de twitter-scrape, zodat we hier een tabel van kunnen maken
+- PHP-script geschreven dat count-data van één dag verzamelt
+- HTTP-server opgezet zodat ik van mijn laptop naar onze tijdelijke server kan surfen.
+- Bezig gegaan met script dat de resultaten van de cronjob elke 10 minuten in een json-bestand, wat problemen gehad met de mongodump API
+
+Logboek 23 maart 2015
+
+- Mongodump-API problemen opgelost door shellscript te gebruiken om variabelen bij te houden
+- 
