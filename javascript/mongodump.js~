@@ -1,0 +1,1 @@
+mongodump -d twitter -c count -q '{date: {$gte: function() {return new Date().setHour(0,0,0,0)}, $lte: function() {return new Date().setHour(23,59,59,0)}}}' 
