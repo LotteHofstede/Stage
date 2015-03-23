@@ -82,7 +82,7 @@ console.clear();
 
 
 
-  var xFisheye = d3.fisheye.scale(d3.scale.identity).domain([0, d3.max(lineData, function(d) { return d.x; })]).focus(100);
+  var xFisheye = d3.fisheye.scale(d3.scale.identity).domain([d3.min(lineData, function(d) { return d.x; }), d3.max(lineData, function(d) { return d.x; })]).focus(100);
 
 
 

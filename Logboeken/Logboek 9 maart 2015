@@ -104,8 +104,6 @@ Logboek 18 maart 2015
         - Wel ongeveer gelukt, maar de grafiek blijft niet breed genoeg en ik geraak er niet aan uit hoe dat komt.
     - Veel research gedaan naar d3.js en veel bijgeleerd
 
-
-
 Logboek 19 maart 2015
 
 - Verder gegaan met de fish-eye, die werkt nu helemaal!
@@ -116,3 +114,15 @@ Logboek 19 maart 2015
 - Processing script herschreven naar python zodat er geen grafische interface meer voor nodig is en dus als cronjob kan worden gedraaid
 - Cronjob opgezet 
 
+Logboek 20 maart 2015
+
+- Naar de resultaten gekeken van de cronjob
+- Een mongo "count-script"-cronjob opgezet, dat elke minuut de de resultaten controleert van de twitter-scrape, zodat we hier een tabel van kunnen maken
+- PHP-script geschreven dat count-data van één dag verzamelt
+- HTTP-server opgezet zodat ik van mijn laptop naar onze tijdelijke server kan surfen.
+- Bezig gegaan met script dat de resultaten van de cronjob elke 10 minuten in een json-bestand, wat problemen gehad met de mongodump API
+
+Logboek 23 maart 2015
+
+- Mongodump-API problemen opgelost door shellscript te gebruiken om variabelen bij te houden
+- 
