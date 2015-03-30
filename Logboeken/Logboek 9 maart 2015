@@ -139,4 +139,23 @@ Logboek 24 maart 2015
 - Begonnen aan script om instagram foto's random weer te geven..
 - Assen toegevoegd zodat tijd erbij staat (parsen wilde niet goed lukken, nam wat tijd in beslag)
 - Lelijke code van eerder een beetje opgekuisd
+
+
+Logboek 25 maart 2015
+- Y-as ook toegevoegd
+- Op twee manieren schaalbaar gemaakt: met een globale schaal en een lokale
+- Rijen van onder af aan ingeladen
+- As en as-lettertype nu ook met fisheye effect
 - 
+
+Logboek 26 maart 2015
+- Jobbeurs
+
+Logboek 27 maart 2015
+- Instagram script verder gemaakt om een x-aantal foto's van een dag te kunnen laden
+- Asynchroon request (ajax) geimplementeerd zodat het aantal dagen data dat wordt opgevraagd afhankelijk is van de schermgrootte
+- X-As naar beneden verplaatst
+- Office warming
+
+Logboek 30 maart 2015
+
