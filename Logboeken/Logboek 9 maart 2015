@@ -161,4 +161,12 @@ Logboek 30 maart 2015
 - Foto's van instagram ingeladen in tijdlijn
 - Foto's mee laten bewegen met fisheye-animatie
 - URL script afgeschreven zodat JSON-dump van elke dag
-- 
+
+
+Logboek 31 maart 2015
+- Foto's onder grafiek geladen, ipv erop, beetje moeten klooien met CSS om het netjes te krijgen...
+- Lijntjes uit foto's laten komen die naar grafiekwijzen (en bollekes op de grafiek gezet)
+- Ook php dump script voor twitter geschreven --> probleem: long-int kon niet wordne verwerkt door de server die hier staat: dus moest ergens anders gedraaid worden
+    - Op mijn laptop gedraaid: nog geklooi... Laptop draaide oudere PHP versie, dus het wilde niet runnen eerst...
+- Bezig gegaan aan tweets die worden ingeladen op tweede tijdlijn, moeilijkheden met tekstveld maar uiteindelijk wel gelukt.
+- Begonnen aan fisheye animatie voor tweets, probleempje met databinding, hopelijk morgen op te lossen.
