@@ -130,3 +130,43 @@ Logboek 23 maart 2015
 - php-script geschreven dat de data uit de dump naar een array parsed, zodat ik ze kan gebruiken voor mijn webpagina's.
 - JSON-dump files in mijn grafiek "geplugd"
 - Wat bewerkingen en testjes op grafieken gedaan
+
+
+Logboek 24 maart 2015
+
+- Stress-tests gedaan met zoveel mogelijk grafieken in te laden op een pagina
+- Bezig gegaan met verschillende grafieken over elkaar weer te geven (twitter, instagram, ...)
+- Begonnen aan script om instagram foto's random weer te geven..
+- Assen toegevoegd zodat tijd erbij staat (parsen wilde niet goed lukken, nam wat tijd in beslag)
+- Lelijke code van eerder een beetje opgekuisd
+
+
+Logboek 25 maart 2015
+- Y-as ook toegevoegd
+- Op twee manieren schaalbaar gemaakt: met een globale schaal en een lokale
+- Rijen van onder af aan ingeladen
+- As en as-lettertype nu ook met fisheye effect
+- 
+
+Logboek 26 maart 2015
+- Jobbeurs
+
+Logboek 27 maart 2015
+- Instagram script verder gemaakt om een x-aantal foto's van een dag te kunnen laden
+- Asynchroon request (ajax) geimplementeerd zodat het aantal dagen data dat wordt opgevraagd afhankelijk is van de schermgrootte
+- X-As naar beneden verplaatst
+- Office warming
+
+Logboek 30 maart 2015
+- Foto's van instagram ingeladen in tijdlijn
+- Foto's mee laten bewegen met fisheye-animatie
+- URL script afgeschreven zodat JSON-dump van elke dag
+
+
+Logboek 31 maart 2015
+- Foto's onder grafiek geladen, ipv erop, beetje moeten klooien met CSS om het netjes te krijgen...
+- Lijntjes uit foto's laten komen die naar grafiekwijzen (en bollekes op de grafiek gezet)
+- Ook php dump script voor twitter geschreven --> probleem: long-int kon niet wordne verwerkt door de server die hier staat: dus moest ergens anders gedraaid worden
+    - Op mijn laptop gedraaid: nog geklooi... Laptop draaide oudere PHP versie, dus het wilde niet runnen eerst...
+- Bezig gegaan aan tweets die worden ingeladen op tweede tijdlijn, moeilijkheden met tekstveld maar uiteindelijk wel gelukt.
+- Begonnen aan fisheye animatie voor tweets, probleempje met databinding, hopelijk morgen op te lossen.
