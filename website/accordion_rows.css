@@ -1,0 +1,129 @@
+body {
+	padding: 0px;
+	margin: 0px;
+}
+
+#container {
+	width: 100%;
+	height:100%;
+	display: inline-block;
+	border-top: solid gray 1px;
+}
+
+.row {
+	position: relative;
+	width: 100%;
+	height: 30px;
+	border-bottom: solid #888 1px;
+}
+
+svg {
+	width: inherit;
+	height: inherit;
+}
+
+.graphs {
+	float: left;
+}
+
+#background{
+
+	position: fixed;
+	display:block;
+	float: left;
+    height: 100%;
+    width: 100%;
+	z-index: -9999;
+}
+
+
+.tick {
+	stroke: #888;
+}
+
+.xaxis {
+	z-index: -999;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	bottom: 0px;
+}
+ .x {
+	height: 100%;
+ }
+text {
+
+	stroke: white;
+	fill: white;
+}
+
+.y > .tick > text {
+	font-size: 10px;
+}
+
+#accordion {
+	height: 90%;
+}
+
+#bottom {
+	display: block;
+	height: 30px;
+}
+
+
+button {
+	position: fixed;
+	z-index: 10000000;
+}
+
+.instagram, .twitter{
+	position: absolute;
+	width: 100%;
+	height : 30px;
+	border-bottom: solid #333 1px;
+	border-top: solid #333 1px;
+	background-color: #CCC;
+	display: block;
+}
+
+.twitter {
+	bottom: 0;
+}
+
+.twitter g {
+	position: absolute;
+	z-index: 0;
+}
+.instagram {
+	left: 0;
+	bottom: 30px;
+}
+
+.instagram svg {
+	z-index: 1;
+}
+
+.instagram g {
+	position: absolute;
+}
+.instagram svg, .twitter svg  {
+	position: absolute;
+	overflow: visible;
+}
+
+.tweet {
+	fill: #CEF6E3;
+}
+
+.twitter text {
+	font-size: 12px;
+	stroke: #060216;
+	fill: #060216;
+	stroke-width: 1px;
+}
+
+
+
+.textRect {
+	position: absolute;
+}
